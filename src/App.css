@@ -1,5 +1,10 @@
 .App {
-  text-align: center;
+  background-image: url('./Images/background.jpeg');
+}
+
+.footer {
+  margin-top: auto! important;
+  position: "fixed";
 }
 
 .App-logo {
