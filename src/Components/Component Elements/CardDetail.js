@@ -10,9 +10,13 @@ const CardDetail = () => {
     const [numPages, setNumPages] = useState(0);
     const document = useSelector(state => state.cardDetail.currentDocument);
 
-    const onDocumentLoadSuccess = ({ numPages }) => {
+    const onDocumentLoadSuccess = () => {
         dispatch(cardDetailActions.SetNumPages(numPages));
         setNumPages(numPages)
+    }
+
+    const onDocumentLoadFailure = () => {
+        console.log("Cannot Load: " + document)
     }
 
     const onClickNextHandler = () => {
@@ -29,7 +33,7 @@ const CardDetail = () => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-body">
-                            <Document file={document}>
+                            <Document file={document} onLoadSuccess={() => onDocumentLoadSuccess()} onLoadError={() => onDocumentLoadFailure()}>
                                 <Page pageNumber={pageNumber} />
                             </Document>
                             <p>Page {pageNumber} of {numPages}</p>
