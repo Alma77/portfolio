@@ -4,14 +4,10 @@ const cardDetailSlice = createSlice({
     name: 'cardDetail',
     initialState: {
         currentDocument: "",
-        showDetail: false,
         numPages: 0,
         pageNumber: 1,
     },
     reducers: {
-        ToggleShowDetail(state) {
-            state.showDetail = !state.showDetail;
-        },
         SetNumPages(state, action) {
             state.numPages = action.payload
         },

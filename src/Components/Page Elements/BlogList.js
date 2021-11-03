@@ -29,7 +29,8 @@ const BlogList = () => {
     ]
 
     return (
-        <div className="container">
+        <div className="container border-bottom border-secondary py-3">
+            <h3 className="text-white text-start py-3 ms-5">Documentation of some of my skills and knowledge:</h3>
             <div className="row justify-content-center">
                 {blogs.map(blog =>
                     <Card key={blog.id} title={blog.title} description={blog.description} url={blog.url} />
