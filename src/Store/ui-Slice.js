@@ -8,8 +8,11 @@ const uiSlice = createSlice({
         showContactMe: false,
     },
     reducers: {
-        ToggleShowDetail(state) {
-            state.showDetail = !state.showDetail
+        ShowDetail(state) {
+            state.showDetail = true;
+        },
+        HideDetail(state) {
+            state.showDetail = false;
         },
         ShowResume(state) {
             state.showResume = true;

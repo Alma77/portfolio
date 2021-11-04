@@ -8,9 +8,13 @@ const Card = (props) => {
     const dispatch = useDispatch();
 
     const onClickHandler = () => {
-        dispatch(uiActions.ToggleShowDetail())
+        const document = {
+            title: props.title,
+            url: props.url
+        }
+        dispatch(uiActions.ShowDetail())
         console.log("Setting current document to: " + props.url)
-        dispatch(cardDetailActions.SetCurrentDocument(props.url))
+        dispatch(cardDetailActions.SetCurrentDocument(document))
     }
 
     return (

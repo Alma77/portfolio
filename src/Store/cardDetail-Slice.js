@@ -3,17 +3,9 @@ import { createSlice } from "@reduxjs/toolkit"
 const cardDetailSlice = createSlice({
     name: 'cardDetail',
     initialState: {
-        currentDocument: "",
-        numPages: 0,
-        pageNumber: 1,
+        currentDocument: {title: "", url: ""},
     },
     reducers: {
-        SetNumPages(state, action) {
-            state.numPages = action.payload
-        },
-        SetPageNumber(state, action) {
-            state.numPages = action.payload
-        },
         SetCurrentDocument(state, action) {
             state.currentDocument = action.payload
         }   

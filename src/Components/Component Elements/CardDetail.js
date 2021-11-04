@@ -1,51 +1,31 @@
-import { Document, Page } from 'react-pdf'
 import { useDispatch, useSelector } from 'react-redux';
-import { cardDetailActions } from '../../Store/cardDetail-Slice';
-import { useState } from 'react'
+import { uiActions } from '../../Store/ui-Slice';
+import { Modal } from 'react-bootstrap';
 
 const CardDetail = () => {
     
     const dispatch = useDispatch();
-    const pageNumber = useSelector(state => state.cardDetail.pageNumber);
-    const [numPages, setNumPages] = useState(0);
     const document = useSelector(state => state.cardDetail.currentDocument);
+    const showDetail = useSelector(state => state.ui.showDetail);
 
-    const onDocumentLoadSuccess = () => {
-        dispatch(cardDetailActions.SetNumPages(numPages));
-        setNumPages(numPages)
-    }
-
-    const onDocumentLoadFailure = () => {
-        console.log("Cannot Load: " + document)
-    }
-
-    const onClickNextHandler = () => {
-        dispatch(cardDetailActions.SetPageNumber(pageNumber+1))
-    }
-
-    const onClickPreviousHandler = () => {
-        dispatch(cardDetailActions.SetPageNumber(pageNumber-1))
+    const onClickHideHandler = () => {
+        dispatch(uiActions.HideDetail())
     }
 
     return (
-        <div>
-            <div className="modal fade" tabIndex="-1">
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-body">
-                            <Document file={document} onLoadSuccess={() => onDocumentLoadSuccess()} onLoadError={() => onDocumentLoadFailure()}>
-                                <Page pageNumber={pageNumber} />
-                            </Document>
-                            <p>Page {pageNumber} of {numPages}</p>
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" onClick={onClickPreviousHandler}>Previous</button>
-                            <button type="button" className="btn btn-secondary" onClick={onClickNextHandler}>Next</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Modal show={showDetail} onHide={() => onClickHideHandler()} backdrop="static" size="lg">
+            <Modal.Header closeButton>
+                <Modal.Title>{document.title}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <div className="min-vh-100">
+                    <iframe className="min-vh-100 w-100" title={document.title} src={document.url}></iframe>
+                </div>                
+            </Modal.Body>
+            <Modal.Footer>
+                <button type="button" className="btn btn-secondary" onClick={() => onClickHideHandler()}>Hide</button>
+            </Modal.Footer>
+        </Modal>
     )
 }
 
