@@ -20,8 +20,7 @@ function App() {
       <Title />
       <Summary />
       {showResume && <Resume />}
-      <BlogList />
-      {showDetail && <CardDetail />}
+      {showDetail ? <CardDetail /> : <BlogList />}
       <ContactMe />
       <MainFooter />
     </div>

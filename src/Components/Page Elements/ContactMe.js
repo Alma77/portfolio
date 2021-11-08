@@ -11,7 +11,6 @@ const ContactMe = () => {
                 <label className="form-label text-white"><PhoneIcon /> +1 435-243-1467</label>
             </div>
         </div>
-        
     )
 }
 
