@@ -29,7 +29,7 @@ const BlogList = () => {
     ]
 
     return (
-        <div className="container border-bottom border-secondary py-3">
+        <div className="container min-vh-100 pt-5, mt-5">
             <text className="text-white text-start py-3 ms-5 fs-3" fontFamily="sonos-logoregular">Documentation of some of my skills and knowledge:</text>
             <div className="row justify-content-center">
                 {blogs.map(blog =>

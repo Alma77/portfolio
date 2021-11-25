@@ -8,6 +8,8 @@ import Resume from './Components/Component Elements/Resume';
 import MainFooter from './Components/Page Elements/MainFooter';
 import ContactMe from './Components/Page Elements/ContactMe';
 import { useSelector } from 'react-redux'
+import LandingPage from './Components/Page Elements/LandingPage';
+import { Switch, Route } from 'react-router-dom'
 
 function App() {
 
@@ -15,14 +17,27 @@ function App() {
   const showResume = useSelector(state => state.ui.showResume)
 
   return (
-    <div className="App min-vh-100">
-      <MainHeader />      
-      <Title />
-      <Summary />
+    <div className="App">
+      <MainHeader />
       {showResume && <Resume />}
-      {showDetail ? <CardDetail /> : <BlogList />}
-      <ContactMe />
-      <MainFooter />
+      {showDetail && <CardDetail />}
+      <Switch>
+        <Route path="/contactme">
+          <ContactMe />
+        </Route>
+        <Route path="/blogs">
+          <BlogList />
+        </Route>
+        <Route path="/" >
+          <LandingPage />
+        </Route>
+             
+        {/* <Summary />
+        {showResume && <Resume />}
+        {showDetail ? <CardDetail /> : <BlogList />}
+        <ContactMe />
+        <MainFooter /> */}
+      </Switch>
     </div>
   );
 }

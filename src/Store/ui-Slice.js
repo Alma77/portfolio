@@ -25,7 +25,7 @@ const uiSlice = createSlice({
         },
         HideContactMe(state) {
             state.showContactMe = false;
-        }
+        },
     }
 });
 

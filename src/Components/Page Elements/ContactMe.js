@@ -1,16 +1,24 @@
-import EmailIcon from "../../Icons/EmailIcon";
-import PhoneIcon from "../../Icons/PhoneIcon";
+// import EmailIcon from "../../Icons/EmailIcon";
+// import PhoneIcon from "../../Icons/PhoneIcon";
+import emailjs from 'emailjs-com'
+import { useState } from 'react'
+import { Redirect } from 'react-router-dom'
+import EmailForm from '../Component Elements/EmailForm'
 
 const ContactMe = () => {
 
-    return (
-        <div className="container my-3 py-3 border-bottom border-secondary text-center">
-            <div className="row">
-                <label className="form-label fs-3 text-white">I'd love to hear from you:</label>
-                <label className="form-label text-white "><EmailIcon /> mrtannertrimble@gmail.com</label>
-                <label className="form-label text-white"><PhoneIcon /> +1 435-243-1467</label>
-            </div>
-        </div>
+    const [redirect, SetRedirect] = useState(false)
+
+    const SendEmail = (e) => {
+        e.preventDefault()
+
+        emailjs.sendForm("gmail", "template_7fu1skr", e.target, "user_0ebkrTE5E03pdJGjZLSSi")
+        .then(() => SetRedirect(true))
+    }
+
+    return ( redirect
+        ?  <Redirect to="/thankyou"/>
+        : <EmailForm SendEmail={SendEmail} />
     )
 }
 
