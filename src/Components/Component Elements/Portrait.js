@@ -4,12 +4,8 @@ import styles from './Portrait.module.css'
 const Portrait = () => {
 
     return (
-        <div className="row pt-5">
-            <span className="col-4"></span>
-            <div className="col-4">
-                <img height="250" src={portrait} alt="..." id={styles.img} />
-            </div>            
-            <span className="col-4"></span>
+        <div className="my-5">
+            <img height="250" src={portrait} alt="..." id={styles.img} />       
         </div>
     )
 }

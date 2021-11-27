@@ -1,4 +1,7 @@
 import Card from '../Component Elements/Card'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { uiActions } from '../../Store/ui-Slice'
 
 const BlogList = () => {
     const blogs = [
@@ -27,6 +30,12 @@ const BlogList = () => {
             url: "Securing an API with Json Web Tokens and Microsoft.Authorization.pdf",
         },
     ]
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(uiActions.NotOnLandingPage())
+    },[dispatch])
 
     return (
         <div className="container min-vh-100 pt-5, mt-5">

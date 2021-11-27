@@ -6,9 +6,27 @@
     text-decoration: underline;
 }
 
+li {
+    border: none !important;
+    background-color: transparent!important;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li:hover {
+    transform: scale(1.1);
+    transition: 250ms linear;
+}
+
 .heading {
     font-size: 50px;
     color: white;
+}
+
+.text {
+    font-family: "Titillium Web"
 }
 
 body {
@@ -106,7 +124,6 @@ header{
 nav{
     color: #FFF;
     float: right;
-    margin:30px 90px;
 }
   /* Header content & title & button*/
 

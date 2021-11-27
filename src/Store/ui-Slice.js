@@ -6,6 +6,8 @@ const uiSlice = createSlice({
         showDetail: false,
         showResume: false,
         showContactMe: false,
+        onLandingPage: true,
+        isLoading: false,
     },
     reducers: {
         ShowDetail(state) {
@@ -26,6 +28,15 @@ const uiSlice = createSlice({
         HideContactMe(state) {
             state.showContactMe = false;
         },
+        IsOnLandingPage(state) {
+            state.onLandingPage = true;
+        },
+        NotOnLandingPage(state) {
+            state.onLandingPage = false;
+        },
+        ToggleIsloading(state) {
+            state.isLoading = !state.isLoading
+        }
     }
 });
 

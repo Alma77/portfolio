@@ -21,7 +21,7 @@ const Resume = () => {
             </Modal.Header>
             <Modal.Body>
                 <div className="min-vh-100">
-                    <iframe className="min-vh-100 w-100" title="My Resume" src="resume.pdf"></iframe>
+                    <iframe className="min-vh-100 w-100" title="My Resume" src="Tanner_Trimble_Resume.PDF"></iframe>
                 </div>                
             </Modal.Body>
             <Modal.Footer>

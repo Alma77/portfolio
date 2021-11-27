@@ -1,7 +1,12 @@
+.navbar {
+    background-color: #046b5a;
+    padding: 16px 48px 8px 48px;
+}
+
 .nav {
     font-family: 'Titillium Web';
     text-transform: uppercase;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .nav * {
