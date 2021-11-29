@@ -38,9 +38,9 @@ const BlogList = () => {
     },[dispatch])
 
     return (
-        <div className="container min-vh-100 pt-5, mt-5">
-            <text className="text-white text-start py-3 ms-5 fs-3" fontFamily="sonos-logoregular">Documentation of some of my skills and knowledge:</text>
-            <div className="row justify-content-center">
+        <div className="container py-5 my-5">
+            <h1 className="text-center">Documentation of my Skills and Knowledge</h1>
+            <div className="row justify-content-center mt-5">
                 {blogs.map(blog =>
                     <Card key={blog.id} title={blog.title} description={blog.description} url={blog.url} />
                 )}

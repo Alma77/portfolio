@@ -1,5 +1,7 @@
 .App {
   background-color: whitesmoke!important;
+  padding: -1;
+  margin: -1;
 }
 
 .footer {
@@ -16,6 +18,10 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .App-header {

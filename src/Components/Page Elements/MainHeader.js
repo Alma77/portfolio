@@ -2,7 +2,7 @@ import { uiActions } from "../../Store/ui-Slice";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import styles from "./MainHeader.module.css"
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav} from "react-bootstrap";
 
 const MainHeader = () => {
 
@@ -17,11 +17,6 @@ const MainHeader = () => {
         ? "transparent"
         : ""
     )
-
-    const navbar = ( onLandingPage
-        ? "py-3 px-5"
-        : "py-3 px-5 shadow"
-    )   
 
     return (
         <div className="container-fluid">
@@ -40,7 +35,7 @@ const MainHeader = () => {
                             </li>
                             <li>
                                 <NavLink to="/about">
-                                    About
+                                    About Me
                                 </NavLink>
                             </li>
                             <li>

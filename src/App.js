@@ -1,11 +1,10 @@
 import './App.css';
 import MainHeader from './Components/Page Elements/MainHeader';
-import Title from './Components/Page Elements/Title';
 import About from './Components/Page Elements/About';
 import BlogList from './Components/Page Elements/BlogList';
 import CardDetail from './Components/Component Elements/CardDetail';
 import Resume from './Components/Component Elements/Resume';
-import MainFooter from './Components/Page Elements/MainFooter';
+// import MainFooter from './Components/Page Elements/MainFooter';
 import ContactMe from './Components/Page Elements/ContactMe';
 import Thankyou from './Components/Page Elements/Thankyou';
 import { useSelector } from 'react-redux'

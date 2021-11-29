@@ -36,7 +36,7 @@ const uiSlice = createSlice({
         },
         ToggleIsloading(state) {
             state.isLoading = !state.isLoading
-        }
+        },
     }
 });
 

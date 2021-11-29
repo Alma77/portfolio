@@ -1,5 +1,36 @@
 #card:hover{
     transform: scale(1.05);
     transition: 250ms linear;
+    cursor:pointer!important;
+    background-image: url("../../Images/cardBackground.gif");
+}
+
+#card {
+    height: 200px;
+    width: 400px;
+    overflow: hidden;
+    background-image: url("../../Images/cardBackground.png");
+    color: white;
     box-shadow: 5px 5px 10px black;
+}
+
+.title {
+    position: absolute;
+    top: 40%;
+    transition: top 0.8s linear
+}
+
+#card:hover .title {
+    top: 10%;
+}
+
+.content {
+    height: 90%;
+    position: relative;
+    bottom: -300px;
+    transition:bottom 0.8s linear;
+}
+
+#card:hover .content {
+    bottom: -75px;
 }

@@ -4,8 +4,8 @@ import styles from './Portrait.module.css'
 const Portrait = () => {
 
     return (
-        <div className="my-5">
-            <img height="250" src={portrait} alt="..." id={styles.img} />       
+        <div>
+            <img height="100%" width="100%" src={portrait} alt="..." id={styles.img} />       
         </div>
     )
 }

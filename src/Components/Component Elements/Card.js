@@ -14,16 +14,18 @@ const Card = (props) => {
         }
         
         dispatch(uiActions.ShowDetail())
-        console.log("Setting current document to: " + props.url)
         dispatch(cardDetailActions.SetCurrentDocument(document))
     }
 
     return (
-        <div className="card mx-5 my-3 px-2 col-4" id={styles.card}>
-            <div className="card-body">
-                <h5 className="card-title">{props.title}</h5>
-                <p className="card-text">{props.description}</p>
-                <button className="btn btn-primary" onClick={() => onClickHandler()}>See Details</button>
+        <div className="card mx-5 my-3 px-2 col-4" id={styles.card} onClick={() => onClickHandler()}>
+            <div className="card-body ms-3">
+                <div className={styles.title}>
+                    <h5 className="card-title">{props.title}</h5>
+                </div>
+                <div className={styles.content}>
+                    <p className="card-text">{props.description}</p>
+                </div>
             </div>
         </div>
     )

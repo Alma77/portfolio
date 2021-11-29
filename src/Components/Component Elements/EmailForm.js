@@ -46,7 +46,7 @@ const EmailForm = (props) => {
         <div>
             <div className="container min-vh-100 my-5 py-5 w-50">
                 <div className={styles.greeting}>
-                    I'd Love to hear from you!
+                    Let's Talk!
                 </div>
                 <form onSubmit={props.SendEmail} className="border border-secondary p-3">
                     <div className="form-group my-3">
