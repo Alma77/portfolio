@@ -24,7 +24,7 @@ const Summary = () => {
                         <div className="col-lg-5 my-5 pe-5">
                             <Portrait />
                         </div>
-                        <div className="col-6 my-5 ps-5">
+                        <div className="col-lg-6 my-5 ps-5">
                             <p className={styles.text}>
                                 My name is Tanner Trimble. I'm a Software Engineer with an interest in Web-Development.
                                 My expertise is in C# and Asp.Net for Back-End. For the Front-End side of things, I use HTML, CSS/SASS, and ReactJS.

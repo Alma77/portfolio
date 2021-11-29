@@ -7,7 +7,7 @@ const SkillDetail = () => {
     return (
         <div className="container w-50 p-5">
             <div className="row">
-                <div className="col-5">
+                <div className="col-lg-5">
                     <img src={skill.image} alt={skill.name} width="100%" height="100%" />
                 </div>
                 <div className="col-lg-7 px-5 mb-2">
