@@ -1,6 +1,7 @@
 import { uiActions } from "../../Store/ui-Slice";
 import { useDispatch, useSelector } from "react-redux";
 import { Modal} from 'react-bootstrap'
+import resume from '../../Documents/Tanner_Trimble_Resume.PDF'
 
 const Resume = () => {
     
@@ -21,7 +22,7 @@ const Resume = () => {
             </Modal.Header>
             <Modal.Body>
                 <div className="min-vh-100">
-                    <iframe className="min-vh-100 w-100" title="My Resume" src="Tanner_Trimble_Resume.PDF"></iframe>
+                    <iframe className="min-vh-100 w-100" title="My Resume" src={resume}></iframe>
                 </div>                
             </Modal.Body>
             <Modal.Footer>

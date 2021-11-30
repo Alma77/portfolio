@@ -2,6 +2,10 @@ import Card from '../Component Elements/Card'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { uiActions } from '../../Store/ui-Slice'
+import SQL from '../../Documents/SQL- 01_01_2020 - 09_11_2021 CDC Covid Deaths Dataset Analysis.pdf'
+import API from '../../Documents/Consuming a RESTful API.pdf'
+import Json from '../../Documents/Securing an API with Json Web Tokens and Microsoft.Authorization.pdf'
+import Todo from '../../Documents/TodoListApi Documentation.pdf'
 
 const BlogList = () => {
     const blogs = [
@@ -9,25 +13,25 @@ const BlogList = () => {
             id: 1,
             title: 'PostgreSQL Data Analysis',
             description: 'Using SQL Queries on a dataset I imported into PGAdmin, I extract useful stories from the data',
-            url: "SQL- 01_01_2020 - 09_11_2021 CDC Covid Deaths Dataset Analysis.pdf",
+            url: SQL,
         },
         {
             id: 2,
             title: 'Consuming a RESTful API',
             description: 'Using a free public API I demonstrate how to consume and display the response data using C#/.Net',
-            url: "Consuming a RESTful API.pdf",
+            url: API,
         },
         {
             id: 3,
             title: 'Designing API with CRUD Endpoints',
             description: 'I design my own custom API with full CRUD capabilities that stores to a local Postgres Database',
-            url: "TodoListAPI Documentation.pdf",
+            url: Todo,
         },
         {
             id: 4,
             title: 'Securing API Endpoints with Json Web Tokens',
             description: 'I extend my existing custom API to secure its endpoints with Json Web Tokens',
-            url: "Securing an API with Json Web Tokens and Microsoft.Authorization.pdf",
+            url: Json,
         },
     ]
 
