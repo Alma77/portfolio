@@ -1,20 +1,33 @@
 import styles from './Card.module.css'
 import { useDispatch } from 'react-redux'
-import { uiActions } from '../../Store/ui-Slice';
-import { cardDetailActions } from '../../Store/cardDetail-Slice';
+import { blogPostActions } from '../../Store/blogPost-Slice';
+import { useState, useEffect } from 'react';
 
 const Card = (props) => {
 
     const dispatch = useDispatch();
+    const [blogPost, SetBlogPost] = useState('')
+
+    useEffect(() => {
+        // import(`../../Documents/BlogPost${props.id}/${props.title}.md`)
+        import("../../Documents/BlogPost1/Consuming a RESTful API.md")
+            .then(res => {
+                fetch(res.default)
+                .then(res => res.text())
+                .then(res => SetBlogPost(res))
+            }
+        );
+
+        console.log(blogPost)
+        
+        dispatch(blogPostActions.SetBlogPost(blogPost))
+    })
 
     const onClickHandler = () => {
-        const document = {
-            title: props.title,
-            url: props.url
-        }
+        // dispatch(uiActions.ShowDetail())
+        // dispatch(cardDetailActions.SetCurrentDocument(document))
+        console.log(blogPost)
         
-        dispatch(uiActions.ShowDetail())
-        dispatch(cardDetailActions.SetCurrentDocument(document))
     }
 
     return (

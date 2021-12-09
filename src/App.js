@@ -7,6 +7,7 @@ import Resume from './Components/Component Elements/Resume';
 // import MainFooter from './Components/Page Elements/MainFooter';
 import ContactMe from './Components/Page Elements/ContactMe';
 import Thankyou from './Components/Page Elements/Thankyou';
+import BlogPost from "./Components/Page Elements/BlogPost"
 import { useSelector } from 'react-redux'
 import LandingPage from './Components/Page Elements/LandingPage';
 import { Switch, Route } from 'react-router-dom'
@@ -25,9 +26,12 @@ function App() {
         <Route path="/contactme">
           <ContactMe />
         </Route>
+        <Route path="/blogs/:id">
+          <BlogPost />
+        </Route>
         <Route path="/blogs">
           <BlogList />
-        </Route>
+        </Route>        
         <Route path="/about">
           <About />
         </Route>

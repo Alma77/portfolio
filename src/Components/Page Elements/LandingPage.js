@@ -45,14 +45,20 @@ const LandingPage = () => {
                         </div>
                     </div>
                     <ul className="list-group list-group-horizontal d-flex justify-content-center my-5">
-                        <li className="list-group-item">
-                            <a href="https://www.linkedin.com/in/tanner-trimble-36a109186/" target="_blank" rel="noreferrer" ><LinkedInIcon /></a>
+                        <li className={"list-group-item"}>
+                            <div className={classes.social}>
+                                <a href="https://www.linkedin.com/in/tanner-trimble-36a109186/" target="_blank" rel="noreferrer" ><LinkedInIcon /></a>
+                            </div>
                         </li>
                         <li className="list-group-item">
-                            <a href="https://www.github.com/Alma77" target="_blank" rel="noreferrer" ><GithubIcon /></a>
+                            <div className={classes.social}>
+                                <a href="https://www.github.com/Alma77" target="_blank" rel="noreferrer" ><GithubIcon /></a>
+                            </div>
                         </li>
                         <li className="list-group-item">
-                            <a href="https://www.instagram.com/trimble.tanner77/" target="_blank" rel="noreferrer" ><InstagramIcon /></a>
+                            <div className={classes.social}>
+                                <a href="https://www.instagram.com/trimble.tanner77/" target="_blank" rel="noreferrer" ><InstagramIcon /></a>
+                            </div>
                         </li>
                     </ul>
                 </section>

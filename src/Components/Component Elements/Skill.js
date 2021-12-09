@@ -1,5 +1,6 @@
 import { skillDetailActions } from "../../Store/skillDetail-Slice";
-import { useDispatch } from 'react-redux' 
+import { useDispatch } from 'react-redux'
+import styles from './Skill.module.css' 
 
 const Skill = ({ skill }) => {
 
@@ -18,9 +19,11 @@ const Skill = ({ skill }) => {
     }
 
     return (
-        <li className="list-group-item">
-            <img src={skill.image} alt={skill.name} height="50px" width="50px" onClick={() => onClickHandler()}/>
-        </li>
+        <div className={styles.skill}>
+            <li className="list-group-item">
+                <img src={skill.image} alt={skill.name} height="50px" width="50px" onClick={() => onClickHandler()}/>
+            </li>
+        </div>
     )
 }
 
