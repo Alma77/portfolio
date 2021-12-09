@@ -16,12 +16,12 @@ Now that I have the API I will create a template MVC .Net Application in Visual 
 
 ## Create New Project
 
-![image1](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/Images/image1.png)
+![image1](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/BlogPost1/Images/image1.png)
 
 
 ## Give it a Name and Location Path
 
-![image2](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/Images/image2.png)
+![image2](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/BlogPost1/Images/image2.png)
 
 
 ## Create New Controller
@@ -30,7 +30,7 @@ Now that I have the API I will create a template MVC .Net Application in Visual 
 
  I need to create a new controller that will handle the communication between my Application and the API. I'll give it the name IMdbController.
 
-![image3](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/Images/image3.png)
+![image3](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/BlogPost1/Images/image3.png)
 
 ## Setup inital Controller Methods
 
@@ -90,11 +90,11 @@ app.UseEndpoints(endpoints =>
 
 Now that I have my appliaction set up to this point I'm ready to start working with the API. The [Movie Database (IMdb Alternative) API](https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/details) provides very useful documentation for getting started and it is quite simple. Since it takes in movie searches and returns the results related to that search it has only two endpoints:
 
-![image4](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/Images/image4.png)
+![image4](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/BlogPost1/Images/image4.png)
 
 Since I don't know any IMdb movie ID's within the scope of this application I will be working only with the By Search endpoint. Within the documenation provided, I find some code for properly creating a HttpClient object sending a request to the API and then receiving the response:
 
-![image5](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/Images/image5.png)
+![image5](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/BlogPost1/Images/image5.png)
 
 This gives us a good jumping off point but my application requires a few things in order to make use of this data. I need to be able to store this information in variables that I can then pass to and render on my Index page. To do this I'm going to need to do 3 things:
 1. Create a class object that resemble the json objects I'm going to be receiving from the API
@@ -108,11 +108,11 @@ This gives us a good jumping off point but my application requires a few things 
 
 Before anything else, I need to know how to design my class object so that the json data can be properly deserialized. To do this my object has to have the same attributes as the json object. To figure this out I need to see how a response from a request looks. An easy way to do this is by using an API tool like [Postman](https://www.postman.com). Simply put the given URI into the request bar, make sure it is set to GET, and add the following two header keys and values in the header section:
 
-![image6](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/Images/image6.png)
+![image6](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/BlogPost1/Images/image6.png)
 
 After sending the request if successful I will receive the following response:
 
-![image7](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/Images/image7.png)
+![image7](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/BlogPost1/Images/image7.png)
 
 Now I know the object structure I need to replicate. After setting up my classes I will have two classes. A SearchResults Class that will look like this:
 
@@ -146,7 +146,7 @@ It is important that my attribute names match up exactly with the json data in o
 
 To deserialize the response I will need to add a nuget package called Nancy. I'll right click on the solution file --> Manage NuGet Packages for Solution --> Search "Nancy" --> install first result:
 
-![image8](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/Images/image8.png)
+![image8](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/BlogPost1/Images/image8.png)
 
 I'll now include at the top of my IMdbController.cs file the following using statements:
 
@@ -266,10 +266,10 @@ This model will expect to store a SearchResults class object that it will receiv
 
 When I run my application this is what you will see:
 
-![image9](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/Images/image9.png)
+![image9](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/BlogPost1/Images/image9.png)
 
 If I search for the movie Avatar this will be displayed:
 
-![image10](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/Images/image10.png)
+![image10](https://tanner-portfolio-blog-images.s3.us-west-1.amazonaws.com/BlogPost1/Images/image10.png)
 
 … other items follow but for brevity I’m only showing the first result.
