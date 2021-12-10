@@ -9,7 +9,7 @@ const Card = (props) => {
     const [blogPost, SetBlogPost] = useState('')
 
     useEffect(() => {
-        // import(`../../Documents/BlogPost${props.id}/${props.title}.md`)
+        //import(`../../Documents/BlogPost${props.id}/${props.title}.md`)
         import("../../Documents/BlogPost1/Consuming a RESTful API.md")
             .then(res => {
                 fetch(res.default)
