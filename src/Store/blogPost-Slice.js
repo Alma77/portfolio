@@ -31,6 +31,11 @@ const blogPostSlice = createSlice({
                 title: 'Serilog Logging',
                 description: 'I add logging to my IMdb movie search application'
             },
+            {
+                id: 6,
+                title: 'Setting Up Simple CI-CD Pipeline for React App',
+                description: 'I show how easy it is to get started with a simple but powerful CI/CD Pipeline'
+            },
         ]
     },
     reducers: {
