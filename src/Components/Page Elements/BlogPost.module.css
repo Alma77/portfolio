@@ -1,1 +1,50 @@
+p img {
+    width: 50%;
+    height: 25%;
+}
 
+pre {
+    background-color: rgba(0,0,0,.95);
+    color: whitesmoke;
+    width: 75%;
+    height: 10%;
+    padding: 2rem;
+    overflow: auto;
+    overflow-y: hidden;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+body p {
+    width: 75%;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: "Century Gothic";
+    font-size: 18px;
+}
+
+body h1{
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    margin-bottom: 2rem; 
+}
+
+body h2,h3 {
+    width: 75%;
+    margin: auto; 
+    font-family: "Century Gothic";
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+body hr{
+    width: 75%;
+    margin: auto;
+}
+
+.list {
+    width: 75%;
+    margin: auto;
+}

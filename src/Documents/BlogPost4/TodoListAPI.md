@@ -8,9 +8,9 @@ For this project I'm going to be demonstrating how to create an API with full CR
 
 ### Software I'll need for this Project:
 
-1. Visual Studio 2019
-2. C#
-3. AspNetCore SDK
+- Visual Studio 2019
+- C#
+- AspNetCore SDK
 
 The first thing I need to do is create the API project. I'll do this by creating the AspNetCore Web API default project:
 

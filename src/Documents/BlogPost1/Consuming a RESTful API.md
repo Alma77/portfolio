@@ -1,14 +1,23 @@
+<style>
+    list {
+        width: 75%;
+        margin: auto;
+    }
+</style>
+
 # Consuming a RESTful API with C# AspNet Core
 
 ---
 
 In this simple project I will be using Http requests in order to send requests to and receive responses from a free public API and then display the information that I recieve back. I will also be stylizing my pages so all the content is easy for the user to digest using Bootstrap5.
 
-I will be using the following tools to do this:
+### I will be using the following tools to do this:
 
+<list>
 - Microsoft Visual Studio 2019
 - AspNet Core SDK 
 - Postman
+</list>
 
 I begin by first deciding which API I want to work with. There are many public API's to choose from but the one I decided to use for this project, due to it being easily accessible and its utility, was the [Movie Database (IMdb Alternative) API](https://rapidapi.com/rapidapi/api/movie-database-imdb-alternative/details). 
 
@@ -190,7 +199,7 @@ public async Task<IActionResult> GetMovie(string searchParameter)
 
 This closely resembles the default code I was given but now once I have the response body I will create a JavaScriptSerializer object provided by the Nancy.json library I added and deserialize the response body into an object of the SearchResults class I created. I will then return View(“Index”, results). What this does is tell the application to render the .cshtml file with the name I provided which will be Index.cshtml and pass along data in results to the view’s model. This brings us to **Step 3**. 
 
-## Access and display the data I passsed to the View's Model
+## Access and display the data I passed to the View's Model
 
 ---
 

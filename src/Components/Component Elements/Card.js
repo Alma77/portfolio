@@ -29,7 +29,7 @@ const Card = (props) => {
                     <h5 className="card-title">{props.title}</h5>
                 </div>
                 <div className={styles.content}>
-                    <p className="card-text">{props.description}</p>
+                    <div className="card-text">{props.description}</div>
                 </div>
             </div>
         </div>

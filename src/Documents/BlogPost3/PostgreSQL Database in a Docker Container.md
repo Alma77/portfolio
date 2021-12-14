@@ -6,12 +6,12 @@
 
 ### Software I'll need for this project:
 
-1. Visual Studio 2019
-2. C#
-3. AspNet SDK
-4. Docker and Docker CLI
+- Visual Studio 2019
+- C#
+- AspNet SDK
+- Docker and Docker CLI
 
- In this project I will create a PostgreSQL database that will be running on a docker container. I will also demonstrate how to connect to this database with any AspNetCore project. 
+In this project I will create a PostgreSQL database that will be running on a docker container. I will also demonstrate how to connect to this database with any AspNetCore project. 
 
 ## Building the Docker Container
 

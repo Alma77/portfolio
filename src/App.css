@@ -1,7 +1,7 @@
 .App {
-  background-color: whitesmoke!important;
-  padding: -1;
-  margin: -1;
+  padding: -1rem;
+  margin: -1rem;
+  background-color: whitesmoke;
 }
 
 .footer {

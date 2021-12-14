@@ -8,8 +8,8 @@ For this project I'm going to add some Logging to an existing web application. I
 
 ### Software I'll need for this project:
 
-1. Visual Studios 2019
-2. AspNetCore SDK
+- Visual Studios 2019
+- AspNetCore SDK
 
 ## Why is logging even important?
 

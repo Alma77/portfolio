@@ -11,9 +11,9 @@ So what exactly is a CI/CD Pipeline? I think the best way to answer this questio
 ---
 
 ### What is needed:
-1. An existing ReactJS Web Application on Github
-2. An AWS account
-3. Github Actions
+- An existing ReactJS Web Application on Github
+- An AWS account
+- Github Actions
 
 ## Creating a Workflow file
 

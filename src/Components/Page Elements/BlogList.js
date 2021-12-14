@@ -19,7 +19,7 @@ const BlogList = () => {
             <div className="row justify-content-center mt-5">
                 <div className="row">
                     {blogs.map(blog =>
-                        <NavLink className="col-lg-6" key={blog.id} to={`blogs/${blog.id}`}>
+                        <NavLink className="col-xl-4 col-lg-6" key={blog.id} to={`blogs/${blog.id}`}>
                             <Card id={blog.id} title={blog.title} description={blog.description} />
                         </NavLink>
                     )}

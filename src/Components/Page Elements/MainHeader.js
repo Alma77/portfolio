@@ -27,28 +27,30 @@ const MainHeader = () => {
                 <Navbar.Toggle aria-controls="main-navbar" className="" />
                 <Navbar.Collapse id="main-navbar">
                     <Nav className="ms-auto">
-                        <ul className={styles.nav}>
-                            <li>
-                                <NavLink to="/">
-                                    Home
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/about">
-                                    About Me
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/blogs">
-                                    Blogs
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/contactme">
-                                    Contact Me
-                                </NavLink>
-                            </li>
-                        </ul>                
+                        <span>
+                            <ul className={styles.nav}>
+                                <li>
+                                    <NavLink to="/">
+                                        Home
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/about">
+                                        About Me
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/blogs">
+                                        Blogs
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/contactme">
+                                        Contact Me
+                                    </NavLink>
+                                </li>
+                            </ul>                
+                        </span>
                     </Nav>
                 </Navbar.Collapse>          
             </Navbar>
