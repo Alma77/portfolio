@@ -16,7 +16,7 @@ function App() {
   const showResume = useSelector(state => state.ui.showResume)
 
   return (
-    <div className="App min-vh-100">
+    <div className="min-vh-100">
       <MainHeader />
       {showResume && <Resume />}
       <Switch>
