@@ -1,7 +1,7 @@
 import Card from "./Card";
 import blogPostSlice from "../../Store/blogPost-Slice";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { render, screen } from "@testing-library/react";
 
