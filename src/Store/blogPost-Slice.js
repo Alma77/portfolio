@@ -36,6 +36,26 @@ const blogPostSlice = createSlice({
                 title: 'Setting Up Simple CI-CD Pipeline for React App',
                 description: 'I show how easy it is to get started with a simple but powerful CI/CD Pipeline'
             },
+            {
+                id: 7,
+                title: 'Setting Up PCI DSS Standard Credit Card Input Using Square Web Payment SDK',
+                description: 'I show how to create a Credit Card input in an ASP.NET Core C# Web Application using Square'
+            },
+            {
+                id: 8,
+                title: 'Registering a New Customer with Square API',
+                description: "I show how to create a new customer on a Square Application using a ASP.NET Core C# Web Application"
+            },
+            {
+                id: 9,
+                title: 'Single Credit Card Payment Processing Using Square',
+                description: "I show how to take in a credit card number and charge amount and process the payment using a ASP.NET Core C# Web Application and Square API"
+            },
+            {
+                id: 10,
+                title: 'Subscription Credit Card Payment Processing Using Square',
+                description: "I show how to take in a credit card number and charge amount and create a subscription payment using a ASP.NET Core C# Web Application and Square API"
+            }
         ]
     },
     reducers: {
