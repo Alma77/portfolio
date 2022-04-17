@@ -3,18 +3,19 @@ import { createSlice } from "@reduxjs/toolkit"
 const blogPostSlice = createSlice({
     name: 'blogPost',
     initialState: {
-        currentPost: "",
         blogPosts: 
         [
             {
                 id: 1,
                 title: 'Consuming a RESTful API',
                 description: 'Using a free public API I demonstrate how to consume and display the response data using C#/.Net',
+                image: "cardBackground"
             },
             {
                 id: 2,
                 title: 'Securing an API with Json Web Tokens and Microsoft.Authorization',
                 description: 'Using Json Web Tokens and Microsoft.Authorizaiton I secure my TodoListAPI project so that only authorized users can access certain data',
+                image: ""
             },
             {
                 id: 3,
@@ -61,7 +62,7 @@ const blogPostSlice = createSlice({
     reducers: {
         SetBlogPost(state, action)
         {
-            state.currentPost = action.payload
+            localStorage.setItem("currentPost", action.payload)
         },      
     }
 });

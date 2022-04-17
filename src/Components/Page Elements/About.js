@@ -1,6 +1,7 @@
 import Portrait from "../Component Elements/Portrait"
 import SkillsBanner from "../Component Elements/SkillsBanner"
 import SkillDetail from '../Component Elements/SkillDetail'
+import Timeline from '../Component Elements/Timeline'
 import { useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { uiActions } from '../../Store/ui-Slice'
@@ -44,6 +45,8 @@ const Summary = () => {
                     <SkillsBanner />
                 </div>
             </section>
+            
+            <Timeline />
         </div>        
     )
 }

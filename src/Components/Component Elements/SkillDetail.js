@@ -15,7 +15,7 @@ const SkillDetail = () => {
                         {skill.name}
                     </div>
                     <div className="row text-center">
-                        <div className="col fs-5">
+                        <div className="col fs-6">
                             Knowledge:
                         </div>
                         <div className="col fs-5">

@@ -48,7 +48,7 @@ const EmailForm = (props) => {
                 <div className={styles.greeting}>
                     Let's Talk!
                 </div>
-                <form onSubmit={props.SendEmail} className="border border-secondary p-3">
+                <form onSubmit={props.SendEmail} className="p-3">
                     <div className="form-group my-3">
                         <label className="form-label">Your Name:</label>
                         <input name="name" type="text" className={isValidName} onBlur={(e) => isValidNameHandler(e)} placeholder="ex: John Doe" required />
@@ -70,8 +70,8 @@ const EmailForm = (props) => {
                             Message must not be empty
                         </div>
                     </div>
-                    <div className="form-group">
-                        <button type="submit" className="btn btn-primary" onClick={() => dispatch(uiActions.ToggleIsloading())}>Send Email</button>
+                    <div className="d-flex justify-content-center">
+                        <button type="submit" className="btn btn-outline-primary" onClick={() => dispatch(uiActions.ToggleIsloading())}>Send Email</button>
                     </div>
                 </form>
                 {/* <div className="row">

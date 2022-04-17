@@ -1,0 +1,201 @@
+$primary: #046b5a;
+$dark-primary: #303F9F;
+$light-primary: #6fe2c5;
+$text: #FFFFFF;
+$primary-text: #212121;
+$secondary-text: #757575;
+$accent: #FF4081;
+
+section {
+  padding: 100px 0;
+}
+
+.timeline {
+
+	position: relative;
+
+	&::before {
+		content: '';
+		background: $light-primary;
+		width: 5px;
+		height: 95%;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.timelineItem {
+	width: 100%;
+	margin-bottom: 70px;
+
+	&:nth-child(even) {
+
+		.timelineContent {
+			float: right;
+			padding: 40px 30px 10px 30px;
+
+			.date {
+				right: auto;
+				left: 0;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				border-style: solid;
+				width: 0;
+				height: 0;
+				top: 30px;
+				left: -15px;
+				border-width: 10px 15px 10px 0;
+				border-color: transparent #f5f5f5 transparent transparent;
+			}
+		}
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+
+.timelineContent {
+	position: relative;
+	width: 45%;
+	padding: 10px 30px;
+	border-radius: 4px;
+	background: #f5f5f5;
+	box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+
+	&::after {
+		content: '';
+		position: absolute;
+		border-style: solid;
+		width: 0;
+		height: 0;
+		top: 30px;
+		right: -15px;
+		border-width: 10px 0 10px 15px;
+		border-color: transparent transparent transparent #f5f5f5;
+	}
+}
+
+.timelineImg {
+	width: 30px;
+	height: 30px;
+	background: $primary;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	margin-top: 25px;
+	margin-left: -15px;
+}
+
+.timelineCard {
+	padding: 0!important;
+
+	p {
+		padding: 0 20px;
+	}
+
+	a {
+		margin-left: 20px;
+	}
+}
+
+.timelineItem {
+  	.timelineImgHeader {
+		background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('https://picsum.photos/1000/800/?random') center center no-repeat;
+		background-size: cover;
+	}
+	.sanpetePantryImgHeader {
+		background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../Images/LogoName.webp') center center no-repeat;
+		background-size: cover;
+	}
+	.squareImgHeader {
+		background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0, .4)), url('../../Images/SquareLogo.png') center center no-repeat;
+		background-size: cover;
+	}
+}
+
+.timelineImgHeader, .sanpetePantryImgHeader, .squareImgHeader {
+
+	height: 225px;
+	position: relative;
+	margin-bottom: 20px;
+
+	h2 {
+		color: $text;
+		position: absolute;
+		bottom: 5px;
+		left: 20px;
+	}
+}
+
+blockquote {
+	margin-top: 30px;
+	color: $secondary-text;
+	border-left-color: $primary;
+	padding: 0 20px;
+}
+
+.date {
+	background: $accent;
+	display: inline-block;
+	color: $text;
+	padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+	.timeline {
+
+		&::before {
+			left: 50px;
+		}
+
+		.timelineImg {
+			left: 50px;
+		}
+
+		.timelineContent {
+			max-width: 100%;
+			width: auto;
+			margin-left: 70px;
+		}
+
+		.timelineItem {
+
+			&:nth-child(even) {
+
+				.timelineContent {
+					float: none;
+
+				}
+			}
+
+			&:nth-child(odd) {
+
+				.timelineContent {
+					
+					&::after {
+						content: '';
+						position: absolute;
+						border-style: solid;
+						width: 0;
+						height: 0;
+						top: 30px;
+						left: -15px;
+						border-width: 10px 15px 10px 0;
+						border-color: transparent #f5f5f5 transparent transparent;
+					}
+				}
+
+			}
+		}
+	}
+	
+}

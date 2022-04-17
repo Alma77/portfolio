@@ -6,7 +6,7 @@ const uiSlice = createSlice({
         showDetail: false,
         showResume: false,
         showContactMe: false,
-        onLandingPage: true,
+        onLandingPage: localStorage.getItem("Home"),
         isLoading: false,
     },
     reducers: {
@@ -29,9 +29,11 @@ const uiSlice = createSlice({
             state.showContactMe = false;
         },
         IsOnLandingPage(state) {
+            localStorage.setItem("Home", true)
             state.onLandingPage = true;
         },
         NotOnLandingPage(state) {
+            localStorage.setItem("Home", false)
             state.onLandingPage = false;
         },
         ToggleIsloading(state) {

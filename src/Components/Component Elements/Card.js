@@ -1,4 +1,4 @@
-import styles from './Card.module.css'
+import styles from './Card.module.scss'
 import { useDispatch } from 'react-redux'
 import { blogPostActions } from '../../Store/blogPost-Slice';
 import { useState, useEffect } from 'react';
@@ -23,7 +23,7 @@ const Card = (props) => {
     }
 
     return (
-        <div className="card mx-5 my-3 px-2 col-4" id={styles.card} onClick={() => onClickHandler()}>
+        <div className="card mx-5 my-3 px-2 col-4" id={`${styles.card}`} onClick={() => onClickHandler()}>
             <div className="card-body ms-3">
                 <div className={styles.title}>
                     <h5 className="card-title">{props.title}</h5>

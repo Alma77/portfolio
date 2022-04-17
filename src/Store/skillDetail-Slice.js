@@ -1,10 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit";
+import cSharp from '../Images/cSharp.png'
 
 const skillDetailSlice = createSlice({
     name: 'skillDetail',
     initialState: {
-        currentSkill: {name: "", img: "", rating: <></>, accomplishments: ""},
-        showSkill: false,
+        currentSkill: {name: "C#", image: cSharp, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>},
+        showSkill: true,
     },
     reducers: {
         SetCurrentSkill(state, action) {

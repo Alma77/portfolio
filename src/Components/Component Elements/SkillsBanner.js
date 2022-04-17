@@ -14,24 +14,24 @@ import Docker from '../../Images/docker.png'
 const SkillsBanner = () => {
     
     const skills = [
-        {name: "C#", image: cSharp, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>, accomplishments: ""},
-        {name: "Asp.Net", image: AspNet, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>, accomplishments: ""}, 
-        {name: "HTML5", image: HTML5, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>, accomplishments: ""}, 
-        {name: "CSS3", image: CSS3, rating: <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>, accomplishments: ""},
-        {name: "SASS", image: SASS, rating: <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>, acomplishments: ""}, 
-        {name: "Bootstrap5", image: Bootstrap5, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>, accomplishments: ""},
-        {name: "Javascript", image: Javascript, rating: <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>, accomplishments: ""},
-        {name: "ReactJS", image: React, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>, accomplishments: ""}, 
-        {name: "PostgreSql", image: PostgreSql, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>, accomplishments: ""}, 
-        {name: "Xamarin.Forms", image: XamarinForms, rating: <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>, accomplishments: ""},
-        {name: "Docker", image: Docker, rating: <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>, accomplishments: ""}
+        {name: "C#", image: cSharp, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>},
+        {name: "Asp.Net", image: AspNet, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>}, 
+        {name: "HTML5", image: HTML5, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>}, 
+        {name: "CSS3", image: CSS3, rating: <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>},
+        {name: "SASS", image: SASS, rating: <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>}, 
+        {name: "Bootstrap5", image: Bootstrap5, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>},
+        {name: "Javascript", image: Javascript, rating: <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>},
+        {name: "ReactJS", image: React, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>}, 
+        {name: "PostgreSql", image: PostgreSql, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>}, 
+        {name: "Xamarin.Forms", image: XamarinForms, rating: <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>},
+        {name: "Docker", image: Docker, rating: <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>}
      ]
 
     return (
         <div className="d-flex justify-content-center">
-            `<ul className="list-group list-group-horizontal">
+            <ul className="list-group list-group-horizontal">
                 {skills.map(skill => 
-                    <Skill skill={skill} />
+                    <Skill key={skill.name} skill={skill} />
                 )}
             </ul>
         </div>
