@@ -39,7 +39,7 @@ const Timeline = () => {
                         <div id="fadeInRight" className={`${styles.timelineContent} ${styles.timelineCard} fadeInRight`}>
                             <div className={styles.squareImgHeader}></div>
                             <div className="date">1 MARCH 2022</div>
-                            <p>Figured out how to do online credit card payments and subscription services using Square in C# and Javascript.</p>
+                            <p>Figured out how to do online credit card payments and subscription services using Square in C# and Javascript. <a target="_blank" rel="noreferrer" className="nav-link" href="https://square.tannersgallery.duckdns.org">Click here to see...</a></p>
                         </div>
                     </div>      
                 </div>
