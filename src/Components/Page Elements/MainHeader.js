@@ -45,6 +45,11 @@ const MainHeader = () => {
                                     </NavLink>
                                 </li>
                                 <li>
+                                    <NavLink to="/myprojects">
+                                        My Projects
+                                    </NavLink>
+                                </li>
+                                <li>
                                     <NavLink to="/contactme">
                                         Contact Me
                                     </NavLink>

@@ -1,10 +1,17 @@
 import styles from "./Timeline.module.scss"
 import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../../Store/ui-Slice";
 
 const Timeline = () => {
 
+    const dispatch = useDispatch();
+
     useEffect(() => {
+
+        dispatch(uiActions.NotOnLandingPage());
+
         ScrollReveal().reveal('.fadeInLeft', {
             origin: 'left',
             distance: '300px',
@@ -18,11 +25,11 @@ const Timeline = () => {
             easing: 'ease-in-out',
             duration: 800,
         });
-    },[])
+    },[dispatch])
       
     return (
         <div>
-            <h1 className="py-5">My Projects</h1>
+            <h1 className="my-5 py-5">My Projects</h1>
             <section className={styles.timeline}>
                 <div className="container">
                     <div className={styles.timelineItem}>

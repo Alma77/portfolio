@@ -10,6 +10,7 @@ import BlogPost from "./Components/Page Elements/BlogPost"
 import { useSelector } from 'react-redux'
 import LandingPage from './Components/Page Elements/LandingPage';
 import { Switch, Route } from 'react-router-dom'
+import Timeline from './Components/Component Elements/Timeline';
 
 function App() {
 
@@ -31,6 +32,9 @@ function App() {
         </Route>        
         <Route path="/about">
           <About />
+        </Route>
+        <Route path = "/myprojects">
+          <Timeline />
         </Route>
         <Route path="/thankyou">
           <Thankyou />
