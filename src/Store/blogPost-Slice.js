@@ -56,6 +56,11 @@ const blogPostSlice = createSlice({
                 id: 10,
                 title: 'Subscription Credit Card Payment Processing Using Square',
                 description: "I show how to take in a credit card number and charge amount and create a subscription payment using a ASP.NET Core C# Web Application and Square API"
+            },
+            {
+                id: 11,
+                title: "Setting up Node.js and Creating a React Application",
+                description: "I walkthrough downloading the software and tools that you need and show how to create your basic default react application"
             }
         ]
     },
