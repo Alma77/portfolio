@@ -22,6 +22,16 @@ const BlogPost = () =>  {
                             props: {
                                 className: styles.list
                             }
+                        },
+                        ol: {
+                            props: {
+                                className: styles.list
+                            }
+                        },
+                        a: {
+                            props: {
+                                className: styles.list
+                            }
                         }
                     }
                 }}>
