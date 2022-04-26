@@ -17,13 +17,11 @@ This tutorial assumes you have a basic understanding of how to operate a compute
 
 This tutorial has 3 major steps:
 
-1. <a href="#vsdownload">Download Visual Studio Code</a>
-2. <a href="#nodedownload">Download Node.js</a>
-3. <a href="#scripts">Running Command Line Interface Scripts</a>
+1. Download Visual Studio Code<
+2. Download Node.js
+3. Running Command Line Interface Scripts
 
 Let's take these one at a time!
-
-<div id="vsdownload"></div>
 
 ## Download Visual Studio Code
 
@@ -36,8 +34,6 @@ First we are going to download Visual Studio code by clicking [here](https://cod
 Click the windows option. This should start a download in your browser for the exectuable file. To view the file in your downloads folder press Ctrl + J on your keyboard while you are focused on your browser application. The executable file should say something like ***VSCodeUserSetup-x64-1.66.2.exe***. Depending on the date you are downloading this the numbers after VSCodeUserSetup may vary. Double click the file and go through the installation steps.
 
 Once you have Visual Studio Code installed and running you are ready for the next step. 
-
-<div id="nodedownload"></div>
 
 ## Download Node.js
 
@@ -72,8 +68,6 @@ npm -v
 ```
 
 I'm may be running older versions of the software so you might see larger numbers for the fist number. That is okay. As long as you receive a version number as a response then that means you are good to move on to the next step.
-
-<div id="scripts"></div>
 
 ## Running Command Line Interface Scripts
 
