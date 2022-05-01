@@ -73,6 +73,14 @@ Then we need to add a function that will pass along the card to the tokenize met
 To finish up we will also need to add a button to set the card token value to our hidden input. This will be accomplished by the following code at the bottom of our document.AddEventListener() function:
 
 ```javascript
+async function SetCard(event, paymentMethod) {
+    event.preventDefault();
+    cardButton.disabled = true;
+    const token = await tokenize(paymentMethod);
+    $('#card-nonce').val(token);
+        
+}
+
 const cardButton = document.getElementById('card-button');
 
 cardButton.addEventListener('click', async function (event) {

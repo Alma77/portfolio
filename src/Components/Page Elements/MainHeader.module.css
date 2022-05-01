@@ -19,7 +19,7 @@
     color: whitesmoke;
     position: relative;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .nav li:hover {
@@ -30,7 +30,7 @@
 .nav li {
     display: inline-block;
     list-style: outside none none;
-    margin: .5em 1em;
+    margin: .5em;
     padding: 0;
 }
 

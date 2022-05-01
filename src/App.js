@@ -1,4 +1,5 @@
 import './App.css';
+import { useEffect } from 'react';
 import MainHeader from './Components/Page Elements/MainHeader';
 import About from './Components/Page Elements/About';
 import BlogList from './Components/Page Elements/BlogList';
@@ -11,10 +12,20 @@ import { useSelector } from 'react-redux'
 import LandingPage from './Components/Page Elements/LandingPage';
 import { Switch, Route } from 'react-router-dom'
 import Timeline from './Components/Component Elements/Timeline';
+import Capstone from './Components/Page Elements/Capstone';
 
 function App() {
 
   const showResume = useSelector(state => state.ui.showResume)
+  useEffect(() => {
+    import(`./Documents/Capstone Project.md`)
+        .then(res => {
+            fetch(res.default)
+            .then(res => res.text())
+            .then(res => localStorage.setItem("capstone", res))
+        }
+    );
+})
 
   return (
     <div className="min-vh-100">
@@ -35,6 +46,9 @@ function App() {
         </Route>
         <Route path = "/myprojects">
           <Timeline />
+        </Route>
+        <Route path = "/mycapstone">
+          <Capstone />
         </Route>
         <Route path="/thankyou">
           <Thankyou />

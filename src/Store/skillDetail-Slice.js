@@ -4,7 +4,12 @@ import cSharp from '../Images/cSharp.png'
 const skillDetailSlice = createSlice({
     name: 'skillDetail',
     initialState: {
-        currentSkill: {name: "C#", image: cSharp, rating: <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>},
+        currentSkill: {
+            name: "C#", 
+            image: cSharp, 
+            rating: <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>,
+            accomplishments: "Designed the Sanpete Pantry Website and my Square Demo in C#"
+        },
         showSkill: true,
     },
     reducers: {

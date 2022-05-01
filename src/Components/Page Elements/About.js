@@ -16,28 +16,26 @@ const Summary = () => {
     },[dispatch])
 
     return(
-        <div className="my-5 py-5">
+        <div className="py-5">
             <section>
                 <h1 className="text-center">Who am I?</h1>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-5 my-5 pe-5">
-                            <Portrait />
-                        </div>
-                        <div className="col-lg-6 my-5 ps-5">
-                            <p className={styles.text}>
-                                My name is Tanner Trimble. I'm a Software Engineer with an interest in Web-Development.
-                                My expertise is in C# and Asp.Net for Back-End. For the Front-End side of things, I use HTML, CSS/SASS, and ReactJS.
-                                I am always looking to expand my skill set, and learn new technologies, so I can design and write 
-                                beautiful software.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <Portrait />
+                <h3>I'm a Software Engineer with an interest in Web Development</h3>
+                <p className={`${styles.text}`}>
+                    During my schooling at Snow College in Ephraim, Utah I earned a Bachelor's Degree in Software Engineering with an emphasis
+                    on Web Development and developed skills in both Back-End and Front-End Web Development. During this time I found I have a
+                    passion for creating beautiful and clean web designs that also facilitate an intuitive user experience. I'm always looking for 
+                    new projects and opportunities to help me grow and advance in both my logical and artistic skills.
+                </p>
+                <p className={`${styles.text}`}>
+                    When I'm not coding I enjoy experiencing the beauty the world has to offer through traveling, hiking, and photography. I also like
+                    to enjoy the fictional worlds created through the creativity of other people by playing video games, reading books, and watching
+                    tv shows. Through these I find inspiration for my own life and goals.
+                </p>
             </section>
             <section id={styles.Skills}>
                 <h1 className="text-center">What are my Skills?</h1>
-                <div className="container mt-3">
+                <div className="container">
                     <div>
                         {showSkill && <SkillDetail />}
                     </div>

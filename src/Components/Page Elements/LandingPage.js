@@ -30,7 +30,7 @@ const LandingPage = () => {
                 <section className={classes.headerContent}>
                     <img src={Me} alt="cartoon" height="100px" width="75px" />
                     <div className={classes.text}>
-                        <span className={classes.heading}>Hello There! My name is Tanner.</span>
+                        <span className={classes.heading}>Hello There! My name is Tanner Trimble.</span>
                         <div className="fs-2">
                             I'm a
                             <div className={classes.typewriter}>

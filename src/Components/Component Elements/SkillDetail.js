@@ -15,12 +15,18 @@ const SkillDetail = () => {
                         {skill.name}
                     </div>
                     <div className="row text-center">
-                        <div className="col fs-6">
-                            Knowledge:
+                        <div className="col-lg fs-6">
+                            <p>Knowledge</p>
                         </div>
-                        <div className="col fs-5">
-                            {skill.rating}
+                        <div className="col-lg fs-5">
+                            <p>{skill.rating}</p>
                         </div>                         
+                    </div>
+                    <div className="row">
+                        <p className="py-2">Accomplishments</p>
+                    </div>
+                    <div className="row">
+                        <p className="col">{skill.accomplishments}</p>
                     </div>
                 </div>
             </div>

@@ -24,7 +24,7 @@ const MainHeader = () => {
                 <div>
                     <button type="button" className="btn btn-outline-light" onClick={() => ShowResumeHandler()}>View Resume</button>
                 </div>
-                <Navbar.Toggle aria-controls="main-navbar" className="" />
+                <Navbar.Toggle aria-controls="main-navbar" />
                 <Navbar.Collapse id="main-navbar">
                     <Nav className="ms-auto">
                         <span>
@@ -47,6 +47,11 @@ const MainHeader = () => {
                                 <li>
                                     <NavLink to="/myprojects">
                                         My Projects
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/mycapstone">
+                                        My Capstone
                                     </NavLink>
                                 </li>
                                 <li>
