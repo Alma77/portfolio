@@ -6,6 +6,7 @@ import { Redirect } from 'react-router-dom'
 import EmailForm from '../Component Elements/EmailForm'
 import { useDispatch } from 'react-redux'
 import { uiActions } from '../../Store/ui-Slice'
+import ContactInfo from '../Component Elements/ContactInfo'
 
 const ContactMe = () => {
 
@@ -28,7 +29,16 @@ const ContactMe = () => {
 
     return ( redirect
         ?  <Redirect to="/thankyou"/>
-        : <EmailForm SendEmail={SendEmail} />
+        : (
+            <div>
+                <section>
+                    <EmailForm SendEmail={SendEmail} />
+                </section>
+                <section>
+                    <ContactInfo />
+                </section>
+            </div>
+        )
     )
 }
 

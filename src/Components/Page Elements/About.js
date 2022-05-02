@@ -5,6 +5,7 @@ import { useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { uiActions } from '../../Store/ui-Slice'
 import styles from './About.module.css'
+import ContactInfo from "../Component Elements/ContactInfo"
 
 const Summary = () => {
 
@@ -41,6 +42,9 @@ const Summary = () => {
                     </div>
                     <SkillsBanner />
                 </div>
+            </section>
+            <section>
+                <ContactInfo />
             </section>            
         </div>        
     )

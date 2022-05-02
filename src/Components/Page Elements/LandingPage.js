@@ -3,9 +3,9 @@ import Typewriter from 'typewriter-effect'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { uiActions } from "../../Store/ui-Slice"
-import GithubIcon from "../../Icons/GithubIcon"
-import LinkedInIcon from "../../Icons/LinkedInIcon"
-import InstagramIcon from "../../Icons/InstagramIcon"
+import GithubIcon from "../../Icons/HomeGithubIcon"
+import LinkedInIcon from "../../Icons/HomeLinkedInIcon"
+import InstagramIcon from "../../Icons/HomeInstagramIcon"
 import Me from "../../Images/me.png"
 
 const LandingPage = () => {

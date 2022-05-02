@@ -44,7 +44,7 @@ const EmailForm = (props) => {
 
     return (
         <div>
-            <div className="container min-vh-100 my-5 py-5 w-50">
+            <div className="container w-50">
                 <div className={styles.greeting}>
                     Let's Talk!
                 </div>
